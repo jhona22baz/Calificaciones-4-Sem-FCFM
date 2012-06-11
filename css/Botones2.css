@@ -1,0 +1,61 @@
+/*---estilo del documento*/
+html {
+	background-color: #000;
+	color:#4d4d4d;
+}
+/*----estilo para los botones--*/
+a[link^="http:"],a[link^="./"],a[link^="../"],/*----botones de enlace a directorios o direcciones--*/
+input[type="button"], input[type="submit"] {/*----botones buttons y submit para formularios--*/
+	outline: none;
+	cursor: pointer;
+	color:#000;        /*----color de la fuente--*/
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;/*----tamaño y tipo de fuente---*/
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	 background: #ff0000;  /*----color de fondo--*/
+	border:dimgray 1px solid;
+	padding: .5em 1.5em .5em;/*--------tamaño del boton----*/
+	/*-------degradado del borde---------*/
+	-moz-box-shadow:inset 0 0 20px #000000;
+	-webkit-box-shadow:inset 0 0 20px #000000;
+	box-shadow:inset 0 0 20px #000000;
+	/*-----------------borde redondeado------------------------------*/
+	-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;
+}
+ /*----------estilo para el boton al pasar el puntero---------*/
+a[link^="http:"]:hover,a[link^="./"]:hover,a[link^="../"]:hover,
+input[type="button"]:hover, 
+input[type="submit"]:hover {
+/*------engrosamos el borde del boton-----*/
+	-moz-box-shadow:inset 0 0 30px #000000;
+	-webkit-box-shadow:inset 0 0 30px #000000;
+	box-shadow:inset 0 0 30px #000000;	
+}
+/*-------------------estilo del boton al clickear----------------*/
+a[link^="http:"]:active,a[link^="./"]:active,a[link^="../"]:active,
+input[type="button"]:active, input[type="submit"]:active {
+/*------reducimos mas el borde del boton-----*/
+	-moz-box-shadow:inset 0 0 15px #000000;
+	-webkit-box-shadow:inset 0 0 15px #000000;
+	box-shadow:inset 0 0 15px #000000;
+}
+/*---------estilo para botones de tipo de archivo rar o zip*/
+ a[href$='.zip'], a[href$='.gzip'], a[href$='.rar'] {
+    display:inline-block;/*-----se amplia el margen-------*/
+    padding-left:40px;/*---------tamaño de lo ancho--------*/
+    line-height:35px;/*---------tamaño de lo largo--------*/
+    background:transparent url(../iconos/zip.gif) center left no-repeat;/*------cargamos el grafico corespondiente-*/
+    }
+	/*----------si se desea agregar otros tipos de archivos 
+	se sigue la misma sintaxis ($) para determinar la extencion
+	           y se carga el grafico repesentativo*/
+ a[href$='.doc'], a[href$='.docx'] {
+    display:inline-block;
+    padding-left:33px;
+    line-height:35px;
+    background:transparent url(../iconos/icono_doc.gif) center left no-repeat;
+    }
+/*----estilo extra para  los marcos no cuenta para los botones*/
+legend{color:#4d4d4d;}
+ fieldset{border:dimgray 1px solid;}

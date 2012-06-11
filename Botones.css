@@ -1,0 +1,106 @@
+ /*estilo3 
+{
+font-family:Comic sans MS;
+ color:#0000FF; 
+ font_size:20px; 
+ background-color:#FFFF00;
+ text-decoration:overline
+}
+*/
+/*---estilo del documento*/
+form
+{
+	background: #CCC; 
+    
+	border-radius: 3em;
+	box-shadow: 0px 7px 7px rgba(0,0,0,0.5);
+	text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+	margin: 0.5em auto;
+	padding: 0.5em;
+	width: 80%;
+}
+form input
+{
+	display: block;
+	font-size: 10px;
+	margin: 0em auto;
+	padding: 0.5em;
+	width: 70%;
+}
+footer
+{
+font-family: 'Rancho', arial;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 2px 2px 2px #7aaf19;
+    width: 1240px;
+    margin: auto;
+    background: transparent url(images/escudo.png) no-repeat right;
+display: block;
+    margin-top: 15px;
+    padding: 3px 10px 0;
+
+}
+body {
+	background-color: #333;
+	color:#000;
+}
+valid { 
+	background:green;
+}
+invalid { 
+	background:red;
+}
+#botonenviar
+{
+	display: block;
+	font-size: 10px;
+	margin: 0em auto;
+	padding: 0.5em;
+	width: 20%;
+}
+#dentropie{
+    margin: auto; 
+    width: 1240px;
+}
+#reporte
+{
+	background: #CCC; 
+	border-radius: 3em;
+	box-shadow: 0px 7px 7px rgba(0,0,0,0.5);
+	text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+	margin: 0.5em auto;
+	padding: 0.5em;
+	width: 80%;
+
+}
+ #capaholamundo{
+               display: none;
+                width: 250px;
+                height: 100px;
+                line-height: 90px;
+                text-align: center;
+                text-shadow: 2px 2px 2px #000;
+                color: #fff;
+                font-family: 'Leckerli One', sans-serif;
+                font-size: 1.8em;
+                margin: auto;
+                background: #1d7aaf;
+                box-shadow: 3px 3px 5px rgba(0,0,0,0.7);
+                -moz-box-shadow: 3px 3px 5px rgba(0,0,0,0.7);
+                -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+                -moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+                border-radius: 5px;
+            }
+#liston{
+/*display: none;*/
+    background: url(images/wallpaper.jpg) top center no-repeat;
+    margin-bottom: 10px;
+    font-family: 'Leckerli One', sans-serif;
+    font-size: 1.4em;
+    color: #fff;
+    text-shadow: 3px 3px 5px black;
+              
+}
+
