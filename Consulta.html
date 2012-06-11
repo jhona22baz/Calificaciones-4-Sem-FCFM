@@ -1,0 +1,94 @@
+<html>
+<head>
+<title> Consulta</title>
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="Botones.css" />
+   <script language="JavaScript">
+	<!--
+	     function matricula1 () {
+               expresion=/^([0-9]*)$/;
+               resultado = expresion.test(this);
+               return resultado;
+             }
+
+	      function matricula2 () {
+               expresion=/^([0-9]*)$/;
+               resultado = expresion.test(this);
+               return resultado;
+             }
+
+	     function mat1(value) {
+		if (!value){
+		alert("Tiene que llenar almenos este campo");
+		}
+	     }
+	
+	      function comprobarDatos()
+             {
+                var fallo=false;
+                var falta="";
+	       
+		 if(datos.mmatricula1.value=="")
+                {
+                	falta +="Indique almenos una matricula en el primer campo\n";
+                	fallo = true;
+		}
+
+		String.prototype.matricula1 = matricula1;
+		String.prototype.matricula2 = matricula2;
+
+		 if(!(datos.mmatricula1.value.matricula1()))
+                {
+                	falta +="Matricula del primer campo Incorrecta.\n";
+                	fallo=true;
+                }
+ 		
+		 if(!(datos.mmatricula2.value.matricula2()))
+                {
+                	falta +="Matricula del segundo campo Incorrecta.\n";
+                	fallo=true;
+                }
+		
+		if (fallo)
+                {
+                   alert(falta);
+                   return false;
+                } 
+		else {
+                   return true;
+                }
+
+            }
+
+		
+   </script>
+<title>Consulta de Alumnos</title>
+
+</head>
+<body>
+<div id="liston">
+	<div id="dentroliston"><span></span>
+	<header><h1><b> <center>Alumnos FCFM</center> </b> </header></h1>
+	</div>
+<a href ="Agregar.html"> Agregar</a>
+<a href ="Consulta.html">Consulta</a>
+<a href ="Borrar.html">Borrar</a>
+<a href ="Cambios.html">Cambios</a>
+<a href ="Reporte.pl">Reporte</a>
+	</div>	
+	<form name="consulta" method="post" action="Consulta.pl" onsubmit="return comprobarDatos();"> 
+	<H2>CONSULTAS POR MATRICULA</H2>	
+	<BR>
+	<H3>Matricula: <input name="mmatricula1" size="8" maxlength="7" onblur="mat1(this.value)"/>  a  Matricula: <input name="mmatricula2" size="8" maxlength="7" type="text" placeholder"matricula"></H3>
+	<input name="Submit" value=" Buscar" type="submit">
+	<BR>
+</form>
+	<footer>
+	los campos de matriculas son obligatorios
+	</footer>
+	
+</body>
+
+
+
+</html>

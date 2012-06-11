@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title> Cambios </title>
+<link rel="stylesheet" type="text/css" href="./css/Botones.css" />
+    <script language="JavaScript">
+         <!--
+
+             window.moveTo(0,0);
+             window.resizeTo(screen.availWidth,screen.availHeight);
+
+             function cambio(value)
+             {
+                if(!value){
+			alert("Es necesario llenar el campo");
+		}
+             }
+           
+         //-->
+  	
+      </script>
+  </head>
+	
+	</br>	
+	<form name="Cambios" method="post" action="Cambios2.pl" onblur="return comprobarDatos();"> 
+
+  	<body> 
+<b></br></br></br></br></br></br>
+<center>Matricula<input name="mmatricula" size="8" maxlength="7" type="text" onblur="cambio(this.value)"/>*</b>
+       	</br></br>
+</font><input name="Submit" value="&#x2714;Enviar" type="submit">
+   </center> 
+          </form>
+    </b>
+  </body>
+</html>

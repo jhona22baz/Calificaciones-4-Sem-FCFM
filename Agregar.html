@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang ="es">
+  <head>
+    <meta http-equiv="content-type" content="text/html"; charset="utf-8">
+    <title> Agregar alumnos FCFM </title>
+<script src="js/libs/modernizr-2.0.6.min.js"></script>
+<link type="text/css" rel="stylesheet" href="Botones.css" />        
+<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.1&amp;sensor=false&amp;language=es&amp;region=MX"></script>
+<script type="text/javascript" src="js/map.js" ></script>
+<link href='http://fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css' />
+
+  <script language="JavaScript">
+         <!--
+
+             window.moveTo(0,0);
+             window.resizeTo(screen.availWidth,screen.availHeight);
+/*
+             function correo ()
+             {
+                expresion=/^[a-z]([\w\.]*)@[a-z]([\w\.]*)\.[a-z]{2,3}$/;
+                resultado = expresion.test(this);
+                return resultado;
+             }*/
+             function materia1 () {
+	       expresion=/^([1]?[0-9]?[0-9])$/;
+               resultado = expresion.test(this);
+               return resultado;
+             }/*
+             function materia2 () {
+	       expresion=/^([1]?[0-9]?[0-9])$/;
+               resultado = expresion.test(this);
+               return resultado;
+             }
+             function materia3 () {
+               expresion=/^([1]?[0-9]?[0-9])$/;
+               resultado = expresion.test(this);
+               return resultado;
+             }
+             function materia4 () {
+               expresion=/^([1]?[0-9]?[0-9])$/;
+               resultado = expresion.test(this);
+               return resultado;
+             }
+             function materia5 () {
+               expresion=/^([1]?[0-9]?[0-9])$/;
+               resultado = expresion.test(this);
+               return resultado;
+             }
+             function materia6 () {
+               expresion=/^([1]?[0-9]?[0-9])$/;
+               resultado = expresion.test(this);
+               return resultado;
+                          }
+             function materia7 () {
+               expresion=/^([1]?[0-9]?[0-9])$/;
+               resultado = expresion.test(this);
+               return resultado;
+             }
+             
+             function edad ()
+             {
+             	expresion=/^([0-9]?[0-9])$/;
+               resultado = expresion.test(this);
+               return resultado;
+             }*/
+             function matricula () {
+               expresion=/^([0-9]*)$/;
+               resultado = expresion.test(this);
+               return resultado;
+             }
+	     function nombre () {
+               expresion=/^([a-zA-Z]*)$/;
+               resultado = expresion.test(this);
+               return resultado;
+             }
+
+             function comprobarDatos()
+             {
+                var fallo=false;
+                var falta="";
+                /*if (datos.mnombre.value=="")
+                {
+                   falta += "Falta su nombre.\n";
+                   fallo = true;
+                }
+                if(datos.mapellidop.value=="")
+                {
+                	falta +="Falta su Apellido paterno.\n";
+                	fallo = true;
+                }
+                if(datos.mmatricula.value=="")
+                {
+                	falta +="Falta su matricula.\n";
+                	fallo = true;
+                }
+                if(datos.mapellidom.value=="")
+                {
+                	falta +="Falta su Apellido materno.\n";
+                	fallo = true;
+                }*/
+                if (datos.medad.value=="")
+                {
+                   falta += "Falta su edad.\n";
+                   fallo = true;
+                }
+/*if (datos.mcorreo.value=="")
+                {
+                   falta += "Falta su Email.\n";
+                   fallo = true;
+                }*/
+//Se crea el mÃ©todo correo()
+//en base a la funciÃ³n del mismo nombre.
+		String.prototype.matricula = matricula;
+                //String.prototype.correo = correo;
+                //String.prototype.edad=edad;
+                String.prototype.materia1 = materia1;
+              /* String.prototype.materia1 = materia2;
+               String.prototype.materia1 = materia3;
+               String.prototype.materia1 = materia4;
+               String.prototype.materia1 = materia5;
+               String.prototype.materia1 = materia6;
+               String.prototype.materia1 = materia7;*/
+              String.prototype.nombre =nombre;
+   /* if(!(datos.medad.value.edad()))
+                {
+                	falta +="El campo de edad solo acepta numeros y no debe estar vacio. \n";
+                	fallo=true;
+                }      
+*/
+ if(!(datos.mapellidop.value.nombre()))
+                {
+                	falta +="El campo Apellido Paterno solo acepta letras\n";
+                	fallo=true;
+                }
+ if(!(datos.mapellidom.value.nombre()))
+                {
+                	falta +="El campo Apellido materno solo acepta letras\n";
+                	fallo=true;
+                }
+ if(!(datos.mnombre.value.nombre()))
+                {
+                	falta +="El campo nombre solo acepta letras\n";
+                	fallo=true;
+                }
+ if(!(datos.mmateria1.value.materia1()))
+                {
+                	falta +="El campo de Materia1 solo acepta numeros y no se permite vacio.\n";
+                	fallo=true;
+                }
+                if(!(datos.mmateria2.value.materia1()))
+                {
+                	falta +="El campo de Materia2 solo acepta numeros y no se permite  --- vacio.\n";
+                	fallo=true;
+                }
+                if(!(datos.mmateria3.value.materia1()))
+                {
+                	falta +="El campo de Materia3 solo acepta numeros y no se permite vacio.\n";
+                	fallo=true;
+                }
+                if(!(datos.mmateria4.value.materia1()))
+                {
+                	falta +="El campo de Materia4 solo acepta numeros y no se permite vacio.\n";
+                	fallo=true;
+                }
+                if(!(datos.mmateria5.value.materia1()))
+                {
+                	falta +="El campo de Materia5 solo acepta numeros y no se permite vacio.\n";
+                	fallo=true;
+                }
+                if(!(datos.mmateria6.value.materia1()))
+                {
+                	falta +="El campo de Materia6 solo acepta numeros y no se permite vacio.\n";
+                	fallo=true;
+                }
+                if(!(datos.mmateria7.value.materia1()))
+                {
+                	falta +="El campo de Materia7 solo acepta numeros y no se permite vacio.\n";
+                	fallo=true;
+                }
+                    
+                if(!(datos.mmatricula.value.matricula()))
+                {
+                	falta +="La matricula no parece correcta.\n";
+                	fallo=true;
+                }              
+             //   datos.mcorreo.value=datos.mcorreo.value.toLowerCase();
+//Se comprueba la cadena.
+             /*   if (!(datos.mcorreo.value.correo()))
+                {
+                   falta += "El e-mail no parece correcto.\n";
+                   fallo=true;
+                }*/
+                if (fallo)
+                {
+                   alert(falta);
+                   return false;
+                } else {
+                   return true;
+                }
+
+            }
+         -->
+      </script>
+ <script type="text/javascript">
+            $(document).ready(function(){
+                $("#liston").fadeIn(3000);
+            })
+        </script>
+  </head>
+  <body> <header>
+<div id="liston">
+<span></span>
+<header><h1><b> <center>Alumnos FCFM</center> </b> </header></h1>
+<a href ="Agregar.html"> Agregar</a>
+<a href ="Consulta.html">Consulta</a>
+<a href ="Borrar.html">Borrar</a>
+<a href ="Cambios.html">Cambios</a>
+<a href ="Reporte.pl">Reporte</a>
+</header>
+</div>
+      <form name="datos" method="post" action="clase.pl" onsubmit="return comprobarDatos();"> 
+        <table>
+        	<tr>
+        	<td>
+			 *Nombre:
+        	</td> 
+        	<td><input checked="true" name="mnombre" size="50" maxlength="50" placeholder="Tu nombre" type="text" required></td>
+             </tr>
+           <tr>
+           	<td>*Apellido Paterno:</td>
+           	<td><input name="mapellidop" size="50" maxlength="50" placeholder="Tu Apellido Paterno" type="text" required></td>
+           </tr>
+           
+           <tr>
+           	<td>*Apellido Materno:</td>
+           	<td><input name="mapellidom" size="50" maxlength="50" placeholder="Tu Apellido Materno" type="text" required></td>
+           </tr>  
+           <tr>
+           	<td>*Matricula</td>
+           	<td> <input name="mmatricula" size="8" maxlength="7" placeholder="Tu matricula" type="text" required></td>
+           </tr>
+      	    <tr>   
+           	<td>*Edad</td>
+           	<td><input name="medad" size="4" maxlength="2" type="number" max="70" min="17" required><fontcolor="#FF0000"></font></td>
+           </tr>
+           <tr>
+           	<td>*E-mail:</td>
+           	<td><input checked="true" name="mcorreo" size="50" placeholder="Tu email" type="email" required></td>
+           </tr>
+           <tr>
+           	<td>*Sexo:</td>
+           	<td>Masculino<input checked="true" name="msexo" type="radio" value="Masculino" ></td></tr>
+	   <tr>		
+<td></td>
+<td>Femenino<input name="msexo" type="radio" value="Femenino"></td>
+</tr>
+            </table>
+ <hr size="1" width="100%">  
+<table>
+           </tr>
+           <tr>
+           	<td>Calificaciones:</td>
+           </tr>
+           <tr>
+           	<td>Ecuaciones Dif.</td>
+           	<td>Interconectividad de Redes</td>
+           	<td>Base de Datos</td>
+           	<td>Ambiente y Sust.</td>
+           	<td>Circuitos D.</td>
+           	<td>Metodologias Modernas Ing. Soft</td>
+           	<td>Bioinformatica</td>   
+           </tr>
+           <tr> 
+            <td><input name="mmateria1" size="10" maxlength="10" type="text" placeholder = "Ecuaciones Diferenciales" required></td>
+            <td><input name="mmateria2" size="10" maxlength="10" type="text" placeholder = "Interconectividad de redes" required></td>
+            <td><input name="mmateria3" size="10" maxlength="10" type="text" placeholder = "Base de Datos" required></td>
+            <td><input name="mmateria4" size="10" maxlength="10" type="text" placeholder = "Ambiente y Sustentabilidad" required></td>
+            <td><input name="mmateria5" size="10" maxlength="10" type="text" placeholder = "Circuitos D." required></td>
+            <td><input name="mmateria6" size="10" maxlength="10" type="text" placeholder = "Metodologias Modernas Ing. Soft" required></td>
+            <td><input name="mmateria7" size="10" maxlength="10" type="text" placeholder = "Bioinformatica" required></td>            
+           </tr>
+     </table>
+            </font><input name="Submit" value="&#x2714;Enviar" type="submit" >
+          </form>
+<script type="text/javascript">
+initializeMap();
+</script>
+	<footer>
+		Todos los campos marcados son obligatorios.
+	</footer>
+  </body>
+</html>
